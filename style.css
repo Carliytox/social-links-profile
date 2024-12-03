@@ -56,5 +56,38 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
   }
+.card {
+    --card-padding: 1.5rem;
+    --card-spacing: 1.5rem;
+    --card-img-width: 88px;
+    --card-img-height: 88px;
+    --card-padding-desktop: 2.5rem;
+  
+    flex: 1;
+    background-color: var(--clr-grey-800);
+    border-radius: 0.75rem;
+    padding: var(--card-padding);
+  
+    display: flex;
+    flex-direction: column;
+    gap: var(--card-spacing);
+    
+    @media screen and (min-width: 48em) {
+        max-width: 456px;
+        padding: var(--card-padding-desktop);
+    }
+    @media screen and (min-width: 90em) {
+        max-width: 384px;
+        padding: var(--card-padding-desktop);
+    }
+}
+.avatar {
+    width: var(--card-img-width);
+    height: var(--card-img-height);
+    border-radius: calc(0.5 * var(--card-img-height));
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
