@@ -17,6 +17,7 @@
 }
 *, *::before, *::after {
     box-sizing: border-box;
+
 }
   
 * {
@@ -27,6 +28,10 @@
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
 }
 img,svg {
     display: block;
@@ -65,7 +70,6 @@ h1, h2, h3, h4, h5, h6 {
     --card-img-width: 88px;
     --card-img-height: 88px;
     --card-padding-desktop: 2.5rem;
-  
     flex: 1;
     background-color: var(--clr-grey-800);
     border-radius: 0.75rem;
