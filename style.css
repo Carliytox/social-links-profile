@@ -97,7 +97,6 @@ svg {
 .profile-info {
   /* Antes: card__text */
   text-align: center;
-  display: flex;
   flex-direction: column;
   gap: var(--profile-card-spacing);
 }
