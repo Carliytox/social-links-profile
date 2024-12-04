@@ -8,6 +8,7 @@
   --fw-bold: 700; /* Fuente en negrita */
   --fw-semi-bold: 600;
   --fw-regular: 400;
+  --font-family: "Inter", sans-serif;
 }
 body {
   background-color: var(--background-color);
@@ -43,7 +44,7 @@ body {
   --profile-card-img-width: 88px;
   --profile-card-img-height: 88px;
   --profile-card-width: 320px;
-  justify-content:center;
+  justify-content: center;
   width: var(--profile-card-width);
   flex: 1;
   background: hsl(0, 0%, 12%);
@@ -62,6 +63,19 @@ body {
   @media screen and (min-width: 90em) {
     max-width: 384px;
     padding: var(--profile-card-padding-desktop);
+  }
+  @media screen and (max-width: 600px) {
+    .profile-card {
+      padding: 1rem;
+      --profile-card-img-width: 64px;
+      --profile-card-img-height: 64px;
+    }
+    .profile-name {
+      font-size: 1.25rem;
+    }
+    .profile-description {
+      font-size: 0.75rem;
+    }
   }
 }
 .profile-avatar-container {
@@ -119,7 +133,7 @@ svg {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  
+  padding: 0%;
 }
 .profile-card-link {
   background-color: var(--clr-grey-700);
