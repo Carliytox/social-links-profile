@@ -1,14 +1,16 @@
+
 :root {
   --background-color: hsl(0, 0%, 8%);
   --text-color: #fff;
   --secondary-text-color: hsl(75, 94%, 57%);
-  --clr-grey-700: hsl(0, 0%, 30%);
-  --clr-green: hsl(75, 70%, 40%);
+  --clr-grey-700: hsl(0, 0%, 20%);
+  --clr-green:  hsl(75, 94%, 57%);
   --clr-white: #ffffff;
   --fw-bold: 700; /* Fuente en negrita */
   --fw-semi-bold: 600;
   --fw-regular: 400;
   --font-family: "Inter", sans-serif;
+  
 }
 body {
   background-color: var(--background-color);
@@ -21,7 +23,7 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  padding: var(--profile_card-paddingcard-padding);
+  padding: var(--profile_card-padding);
 }
 .profile-page {
   /*antes page*/
@@ -39,8 +41,8 @@ body {
 .profile-card {
   /* Antes: card */
   --profile-card-padding-desktop: 2.5rem;
+  --profile-card-spacing: 0.25rem;
   --profile-card-padding: 1.5rem;
-  --profile-card-spacing: 1.5rem;
   --profile-card-img-width: 88px;
   --profile-card-img-height: 88px;
   --profile-card-width: 320px;
@@ -76,6 +78,9 @@ body {
     .profile-description {
       font-size: 0.75rem;
     }
+    .profile-location {
+      font-size: 0.875rem; 
+    }
   }
 }
 .profile-avatar-container {
@@ -99,6 +104,7 @@ svg {
   text-align: center;
   flex-direction: column;
   gap: var(--profile-card-spacing);
+  display: flex
 }
 .profile-info > *:last-child {
   margin-top: var(--card-spacing);
@@ -107,13 +113,14 @@ svg {
   /*Antes: card__name-group*/
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: var(--profile-card-spacing);
 }
 .profile-name {
   /* Antes: card__name */
   font-size: 1.5rem; /* Antes: var(--heading-font-size) */
   font-weight: var(--fw-semi-bold);
   color: var(--clr-white);
+  height: 15px;
 }
 .profile-location {
   /* Antes: card__location */
@@ -126,6 +133,7 @@ svg {
   color: var(--clr-white);
   font-weight: var(--fw-regular);
   font-size: 0.875rem;
+  height: 5px;
 }
 .profile-list {
   list-style: none;
@@ -137,7 +145,6 @@ svg {
 .profile-card-link {
   background-color: var(--clr-grey-700);
   text-align: center;
-
   border-radius: 0.5rem;
   padding: 0.75rem;
   cursor: pointer;
